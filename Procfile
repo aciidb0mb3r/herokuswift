@@ -1,1 +1,1 @@
-web: herokuswift
+web: herokuswift $PORT

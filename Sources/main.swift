@@ -71,8 +71,12 @@ extension CUnsignedShort {
   func htons() -> CUnsignedShort { return (self << 8) + (self >> 8); }
 }
 
+let args = Array(Process.arguments.dropFirst())
 
-let portInt = UInt16(8011)
+
+
+let portInt = UInt16(args[0])!
+print("trying to run on port \(portInt)")
 
 let server = HTTP(port: portInt)
 
