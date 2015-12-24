@@ -72,7 +72,7 @@ extension CUnsignedShort {
 }
 
 
-let portInt = UInt16(8010)
+let portInt = UInt16(80)
 
 let server = HTTP(port: portInt)
 
