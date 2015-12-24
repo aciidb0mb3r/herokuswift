@@ -73,7 +73,7 @@ extension CUnsignedShort {
 
 let args = Array(Process.arguments.dropFirst())
 
-
+print("starting app")
 public struct StderrOutputStream: OutputStreamType {
     public static let stream = StderrOutputStream()
     public func write(string: String) {fputs(string, stderr)}
