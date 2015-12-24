@@ -74,6 +74,13 @@ extension CUnsignedShort {
 let args = Array(Process.arguments.dropFirst())
 
 
+public struct StderrOutputStream: OutputStreamType {
+    public static let stream = StderrOutputStream()
+    public func write(string: String) {fputs(string, stderr)}
+}
+public var errStream = StderrOutputStream.stream
+
+print("This prints to stderr", &errStream)
 
 let portInt = UInt16(args[0])!
 print("trying to run on port \(portInt)")
